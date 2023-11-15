@@ -15,6 +15,7 @@ revm-precompile = { path = "../precompile", version = "2.2.0", default-features 
 
 #misc
 auto_impl = { version = "1.1", default-features = false }
+eyre = "0.6.8" 
 
 # Optional
 serde = { version = "1.0", features = ["derive", "rc"], optional = true }
@@ -72,6 +73,11 @@ with-serde = []
 [[example]]
 name = "fork_ref_transact"
 path = "../../examples/fork_ref_transact.rs"
+required-features = ["ethersdb"]
+
+[[example]]
+name = "test"
+path = "../../examples/test.rs"
 required-features = ["ethersdb"]
 
 [[bench]]
